@@ -15,7 +15,7 @@ const Task2 = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2  w-full gap-5 absolute ">
            
             <Testinomial id={1} />
-            <Testinomial id={2} />
+            <Testinomial id={2} />    
            <Testinomial id={3} disablehover />
            <Testinomial id={4} disablehover />
         </div>

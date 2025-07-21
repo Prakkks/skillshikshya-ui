@@ -8,13 +8,13 @@ type Props = {
 const Testinomial = ({ id, disablehover = false }: Props) => {
     const task = task2_container.find( (task) => task.id === id );
     const float_value = task?.text_alignment ; 
-    // const float_value = task?.text_alignment ; 
-  
-
+    
+    
+    
  
 
   return (
-    <div className= {`${disablehover ? '' : 'group-card'} rounded-3xl relative  p-7 py-10  text-white font-sans z-0`}   style={{ backgroundColor: task?.bg_color , textAlign: task?.text_alignment  } }>
+    <div className= {`${disablehover ? '' : ' group-card'} rounded-3xl relative  p-7 py-10  text-white font-sans z-0`}    style={{ backgroundColor: task?.bg_color , textAlign: task?.text_alignment  } }>
         
       <img src={task?.icons} className={` hidden z-10 md:block h-full absolute vertical-float ${task?.icon_position === 'left' ? '-left-14' : '-right-12'} top-16  `}   />
         
