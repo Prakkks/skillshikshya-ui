@@ -46,7 +46,7 @@ export const task2_container: Task2ContainerProps[]  = [
 
 export const task2_container_hover: Task2ContainerHover[] = [
    {id:1,
-    bg: '/public/assets/Task2/bg-id-1.png',
+    bg: '/assets/Task2/bg-id-1.png',
         content: [ {
             img: '/assets/Task2/cartoon-2-1.png',
             title: 'Clarity unlocked— \n stickers, sips, and skills \n all in one go!',
@@ -54,7 +54,7 @@ export const task2_container_hover: Task2ContainerHover[] = [
         },]
     },
     {id:2,
-        bg: '/public/assets/Task2/bg-id-2.png',
+        bg: '/assets/Task2/bg-id-2.png',
         content: [ {
             img: '/assets/Task2/cartoon-3-1.png',
             title: 'Focused faces—learning \n mode: ON!',
