@@ -21,7 +21,7 @@ const Testinomial = ({ id, disablehover = false }: Props) => {
        <div className={` max-w-full md:max-w-[80%]  ` } style={{float: float_value }} >
         <h1 className=" font-bold text-xl sm:text-3xl mb-2 sm:mb-3 "> {task?.heading} </h1>
         <p className="  text-lg sm:text-xl  mb-3 sm:mb-6 "> {task?.sub_heading}</p>
-        <p className=" text-md sm:text-lg md:whitespace-pre-line  " > {task?.description}</p>
+        <p className=" text-md font-extralight text-gray-200 sm:text-lg md:whitespace-pre-line  " > {task?.description}</p>
        </div>
     </div>
 

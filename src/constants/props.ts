@@ -9,3 +9,15 @@ text_alignment: 'left' | 'right' ;
   icon_position: 'left' | 'right' | 'top' | 'bottom';
 
 }
+
+export  interface Task2ContainerHover {
+    id: number;
+    bg: string;
+    content: Task2ContainerHoverContent[];
+}
+
+export interface Task2ContainerHoverContent {
+    img: string;
+    title: string;
+    position? : string;     
+}

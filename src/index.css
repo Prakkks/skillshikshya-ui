@@ -18,7 +18,7 @@
       transition-duration: 1s;
      transition-timing-function: ease-in-out;
       transition-delay: 0.3s, 0.2s; 
-      z-index: 5;
+      z-index: 5;       
 }
 
 .group-card:hover {
