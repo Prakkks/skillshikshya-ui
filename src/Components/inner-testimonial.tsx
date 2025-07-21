@@ -27,7 +27,7 @@ const InnerTestinomial = ({ id }: Props) => {
 
   return (
    <div
-  className={`rounded-3xl overflow-y-hidden overflow-x-visible relative h-[20rem] p-7 py-10 text-white font-sans z-0`}
+  className={`rounded-3xl overflow-y-hidden overflow-x-visible relative h-[18rem] sm:h-[20rem] p-7 py-10 text-white font-sans z-0`}
   style={{ background:  `url(${task.bg})`, backgroundSize: 'cover',backgroundPosition: "center" }}
 >
    
@@ -41,10 +41,10 @@ const InnerTestinomial = ({ id }: Props) => {
      <img src="/assets/Task2/Icon-right.png"  /></button>
 
     <div className="flex flex-col  pl-3 md:pl-11 justify-center z-0">
-        <p className={`md:whitespace-pre-line font-bold text-xl  ${firstelement ? 'text-right pr-10' : 'text-left'} `}> {currentvalue.title}</p>
-        <img src={currentvalue.img} className="h-full absolute -bottom-4 left-0  pointer-events-none " />
+        <p className={`md:whitespace-pre-line font-bold text-base sm:text-xl  ${firstelement ? 'text-right pr-10' : 'text-left'} `}> {currentvalue.title}</p>
+        <img src={currentvalue.img} className="h-[90%] sm:h-full absolute -bottom-4 left-0  pointer-events-none " />
     </div>
-    { firstelement && <img className="absolute h-[80px] -rotate-45  -translate-y-16 left-[14%] object-cover " src="/assets/Task2/wow.png" />}
+    { firstelement && <img className="absolute h-[80px] -rotate-45 hidden sm:block  -translate-y-16 left-[14%] object-cover " src="/assets/Task2/wow.png" />}
     { firstelement && <img className="absolute h-[100px] rotate-45  bottom-[10%] right-[20%] " src="/assets/Task2/wow.png" />}
 
 {/* body */}
