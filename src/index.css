@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes floatvertical {
+     0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.vertical-float
+{
+    animation: floatvertical 4s ease-in-out infinite ;
+}
+
+.group-card{
+    transition: transform ,opacity;
+      transition-duration: 1s;
+     transition-timing-function: ease-in-out;
+      transition-delay: 0.3s, 0.2s; 
+      z-index: 5;
+}
+
+.group-card:hover {
+     transform: translateX(-104%); 
+     opacity: 0;       
+     transition-duration: 0.4s;      
+     transition-delay: 0.3s 0.3s;    
+     z-index: 2;
+}
+
