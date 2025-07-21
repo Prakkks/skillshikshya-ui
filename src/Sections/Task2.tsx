@@ -1,6 +1,5 @@
 import InnerTestinomial from "../Components/inner-testimonial"
 import Testinomial from "../Components/testinomial"
-import { task2_container_hover } from "../constants/values"
 
 const Task2 = () => {
   return (
