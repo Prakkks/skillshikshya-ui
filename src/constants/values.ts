@@ -98,7 +98,7 @@ export const task1_container: task1ContainerProps[] = [
   },
 
    {
-    img: '/public/assets/Task1/likes.gif',
+    img: '/assets/Task1/likes.gif',
    },
 
    {
@@ -108,7 +108,7 @@ export const task1_container: task1ContainerProps[] = [
     hover_video : '/assets/Task1/Content.png',
   },
    {
-    img: '/public/assets/Task1/trophy.gif',
+    img: '/assets/Task1/trophy.gif',
    },
 
    {
@@ -138,7 +138,7 @@ export const task1_container: task1ContainerProps[] = [
     }
   },
    {
-    img: '/public/assets/Task1/like.gif',
+    img: '/assets/Task1/like.gif',
 
    },
 
