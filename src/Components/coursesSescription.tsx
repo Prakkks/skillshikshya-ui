@@ -1,9 +1,10 @@
 import { useState } from "react"
 import { task3_container } from "../constants/values";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const CoursesDescription = () => {
     const [active , setActive] = useState<number>(1);
+    const [prevActive, setPrevActive] = useState<number>(1);
     // const [activeClass ,setActiveClass] = useState<string|null>(null); 
 
   return (
@@ -11,12 +12,11 @@ const CoursesDescription = () => {
       {task3_container.map((item, index) => {
        const isActive = (active === item.id);
     const activeClass = !isActive ? "bg-[#F9EBEC] text-[#C33241] origin-top-right   " : "text-[#F9EBEC]  bg-[#C33241] basis-1/2 origin-bottom-left basis-1/2  ";
-    const headingtitle = !isActive ? "   " : "  ";
     const headings = isActive ? "   flex-row grow  " : " flex-col-reverse grow ";
     const headings_description = isActive ? "  whitespace-pre-line  justify-end  " : "  right-0 top-1/2  md:-translate-y-1/2 md:rotate-[-90deg]  md:absolute ";
-        
+     const direction = item.id > prevActive ? "right" : "left";   
     return (
-      <div key={index} className={`relative group transition-all duration-1000 ease-in-out transform rounded-3xl flex flex-col-reverse grow p-5 md:p-10 ${activeClass}`}   onClick={() => setActive(item.id)}>
+      <div key={index} className={`relative group transition-all duration-1000 ease-in-out transform rounded-3xl flex flex-col-reverse grow p-5 md:p-10 ${activeClass}`}   onClick={() => {setPrevActive(active); setActive(item.id)}}>
         
      {/* hover ------------- */}
          <div className={`absolute -top-16 left-1/2 -translate-x-1/2 opacity-0 ${ isActive  ? 'group-hover:opacity-0' : 'group-hover:opacity-100'} transition-all duration-300 z-10 flex flex-col items-center`}>
@@ -37,24 +37,38 @@ const CoursesDescription = () => {
         </div>
         </div>
       
+      <AnimatePresence>
        {isActive && <>
         <div className=" flex flex-col gap-5 sm:gap-10 ">
-            <div className="float-right text-right"> 
+            <motion.div className="float-right text-right"
+             initial={{ x: "5%", opacity: 0 }}
+             animate={{ x: 0, opacity: 1 }}
+             exit={{ x: "5%", opacity: 0 }}
+            transition={{ type: "tween", duration: 0.2 }}
+
+            > 
                 <button className="text-base"> View all Courses &nbsp; <span className=" horizontalanimation font-bold" > → </span></button>
-                 </div>
-                <div className={`flex flex-row  justify-evenly gap-3 items-center p-2 `} >
+                 </motion.div>
+                <motion.div className={`flex flex-row  justify-evenly gap-3 items-center p-2  `}
+                initial={{ x: direction === "right" ? "-100%" : "100%", opacity: 0 }}
+                animate={{ x: 0, opacity: 1 }}
+                exit={{ x: direction === "right" ? "-100%" : "100%", opacity: 0 }}
+                transition={{ type: "tween", duration: 0.4 }}
+                >
                     <img src="/assets/Task3/logo-1.svg" className="  h-[50%] md:h-[70%] w-auto  lg:h-[80%]" />
                     <img src="/assets/Task3/logo-2.svg"  className=" h-[50%]  md:h-[70%] w-auto lg:h-[80%]" />
                     <img src="/assets/Task3/logo-3.svg"  className=" h-[50%]  md:h-[70%] w-auto lg:h-[80%]" />
                     <img src="/assets/Task3/logo-4.svg"  className=" h-[50%]  md:h-[70%] w-auto lg:h-[80%]" />
-                </div>
+                </motion.div>
            
         </div>
        </>}
+       </AnimatePresence>
 
       </div>
     );
   })}
+  
     </div>   
   )
 }

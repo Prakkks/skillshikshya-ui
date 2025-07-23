@@ -13,26 +13,34 @@ function createArray(n: number) {
   return result;
 }
 
-function shuffleboxvalue(rowsize = 9 , colsize=26) {
-  const result = [];
-  let min = 0;
-  let max = 26;
-  for (let i = 1; i <= rowsize; i++) {
-    const random = Math.floor(Math.random() * (max - min + 1)) + min;
-    result.push(random);
-    min = max + 1;
-    max = max + colsize;
-  }
-  console.log("result= ", result);
-  return result;
-}
+// function shuffleboxvalue(rowsize = 9 , colsize=26) {
+//   const result = [];
+//   let min = 0;
+//   let max = 26;
+//   for (let i = 1; i <= rowsize; i++) {
+//     const random = Math.floor(Math.random() * (max - min + 1)) + min;
+//     result.push(random);
+//     min = max + 1;
+//     max = max + colsize;
+//   }
+//   return result;
+// }
+const shuffleValues = [
+  [4, 34, 58, 96, 126, 154, 182, 205, 228],
+  [20, 34, 72, 99, 126, 132, 182, 195, 210],
+  [16, 37, 74, 97, 127, 141, 179, 198, 222],
+  [25, 48, 72, 81, 110, 144, 157, 207, 215]
+];
+
 
 const Task4 = ({row,column}: Props) => {
  
   const total = column * row;
 
   const [array, setArray] = useState<number[]>([]);
-  const [highlightrow, setHighlightRow] = useState<number[]>([])
+  
+  const [_, setHighlightRowIndex] = useState(0);
+  const [highlightrow, setHighlightRow] = useState<number[]>(shuffleValues[0])
 
   useEffect(() => {
     
@@ -41,9 +49,16 @@ const Task4 = ({row,column}: Props) => {
   }, []);
 
     useEffect(() => {
-      const ourtimer =   setInterval(()=> (
-            setHighlightRow(shuffleboxvalue(row))
-        ), 2000);
+     const ourtimer = setInterval(() => {
+      setHighlightRowIndex((prev) => {
+        const nextIndex = (prev + 1) % shuffleValues.length;
+        setHighlightRow(shuffleValues[nextIndex]);
+        return nextIndex;
+      });
+
+
+      // setHighlightRow(shuffleboxvalue(row));
+  }, 2000);
 
    return () => { clearInterval(ourtimer);}
   }, []);
