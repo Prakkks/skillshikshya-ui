@@ -116,7 +116,7 @@ export const task1_container: task1ContainerProps[] = [
    
   },
    {
-    img: '/public/assets/Task1/happylife.gif',
+    img: '/assets/Task1/happylife.gif',
    },
 
    {
