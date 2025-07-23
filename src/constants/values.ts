@@ -1,4 +1,4 @@
-import type { Task2ContainerHover, Task2ContainerProps } from "./props";
+import type { task1ContainerProps, Task2ContainerHover, Task2ContainerProps, Task3ContainerProps } from "./props";
 
 export const task2_container: Task2ContainerProps[]  = [
   {
@@ -65,5 +65,89 @@ export const task2_container_hover: Task2ContainerHover[] = [
 
         }]
     },
+]
+
+
+export const task3_container:Task3ContainerProps[] = [
+  {
+    id:1,
+    headingvalue : '23',
+    title: 'All Courses',
+    sub_title: "courses you're powering \n through right now.",
+  },
+   {
+    id: 2,
+    headingvalue : '05',
+    title: 'Upcoming Courses',
+    sub_title: "exciting new courses \n waiting to boost your skills.",
+  },
+    {
+    id: 3,
+    headingvalue : '10',
+    title: 'Ongoing Courses',
+    sub_title: "currently happening — don’t \n miss out on the action!",
+  },
+]
+
+
+export const task1_container: task1ContainerProps[] = [
+ 
+   {
+    img: '/assets/Task1/testimonial3.png',
+    
+  },
+
+   {
+    img: '/public/assets/Task1/likes.gif',
+   },
+
+   {
+    img: '/assets/Task1/testimonial4.png',
+    message: '⭐️⭐️⭐️⭐️⭐️',
+    hover : 'video',
+    hover_video : '/assets/Task1/Content.png',
+  },
+   {
+    img: '/public/assets/Task1/trophy.gif',
+   },
+
+   {
+    img: '/assets/Task1/testimonial5.png',
+   
+  },
+   {
+    img: '/public/assets/Task1/happylife.gif',
+   },
+
+   {
+    img: '/assets/Task1/testimonial6.png',
+   
+  },
+   {
+    img: '',
+   },
+
+   {
+    img: '/assets/Task1/testimonial1.png',
+    message: 'Amazing ⭐️⭐️⭐️⭐️⭐️',
+    hover : 'text',
+    hover_text : {
+      text: 'I was amazed and impressed by the course structure as \n it was distinctly different from other courses in the \n market. The classes were highly interactive and the \n instructor was very humble and friendly. Recordings of \n the classes were provided within a short time after \n each class, which made revision very easy and \n beneficial. I have recommended the same course to my \n data-enthusiast friends."',
+      name: 'Rajesh Dhakal',
+      sub: 'Digital Marketing Student',
+    }
+  },
+   {
+    img: '/public/assets/Task1/like.gif',
+
+   },
+
+   {
+    img: '/assets/Task1/testimonial2.png',
+   
+  },
+   {
+    img: '',
+   },
 ]
 

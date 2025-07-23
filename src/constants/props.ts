@@ -21,3 +21,23 @@ export interface Task2ContainerHoverContent {
     title: string;
     position? : string;     
 }
+
+export interface Task3ContainerProps {
+  id: number;
+  headingvalue: string;
+  title: string;
+  sub_title: string;
+}
+
+export interface task1ContainerProps {
+ img: string,
+ message?: string,
+ hover?: 'text' | 'video',
+ hover_text?: {
+  text: string,
+  name: string,
+  sub: string
+  },
+  hover_video?: string,
+
+}

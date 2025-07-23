@@ -3,15 +3,20 @@
 @tailwind utilities;
 
 
+
+.font-fredoka {
+	font-family: "Fredoka", sans-serif;
+	font-weight: 600;
+}
+
+
 @keyframes floatvertical {
      0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-10px); }
 }
 
-.vertical-float
-{
-    animation: floatvertical 4s ease-in-out infinite ;
-}
+
+
 
 .group-card{
     transition: transform ,opacity;
@@ -28,4 +33,15 @@
      transition-delay: 0.3s 0.3s;    
      z-index: 2;
 }
+
+.horizontalanimation{
+    animation: floathorizontal 1.5s ease-in-out infinite ;
+    display: inline-block;
+}
+
+@keyframes floathorizontal {
+  0%, 100% { transform: translateX(0px); }
+    50% { transform: translateX(-5px); }
+}
+
 

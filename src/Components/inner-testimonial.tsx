@@ -35,9 +35,9 @@ const InnerTestinomial = ({ id }: Props) => {
   {/* ticket style */}
  
   {/* buttons */}
-  <button disabled= {total <=1} className="absolute left-0 top-[50%] z-100 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-[#FAFAFA] text-black shadow-md rounded-full shadow-gray-500 flex items-center justify-center  transition "
+  <button disabled= {total <=1} className="absolute left-1 top-[50%] z-100 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-[#FAFAFA] text-black shadow-md rounded-full shadow-gray-500 flex items-center justify-center  transition "
     onClick={HandleClickLeft} > <img src="/assets/Task2/Icon-left.png"  /> </button>
-  <button  disabled= {total <=1} className="absolute -right-0 top-[50%] z-100 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-[#FAFAFA] text-black shadow-md shadow-gray-400 rounded-full flex items-center justify-center  transition" onClick={HandleClickRight} >
+  <button  disabled= {total <=1} className="absolute right-1 top-[50%] z-100 -translate-y-1/2 w-8 h-8 md:w-12 md:h-12 bg-[#FAFAFA] text-black shadow-md shadow-gray-400 rounded-full flex items-center justify-center  transition" onClick={HandleClickRight} >
      <img src="/assets/Task2/Icon-right.png"  /></button>
 
     <div className="flex flex-col  pl-3 md:pl-11 justify-center z-0">

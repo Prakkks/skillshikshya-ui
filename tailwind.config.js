@@ -12,6 +12,7 @@ export default {
       fontFamily:
       {
           sans: ['Outfit', 'sans-serif'],
+          fredoka : ['Fredoka', 'sans-serif'],
       }
     },
   },
